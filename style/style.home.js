@@ -98,11 +98,10 @@ function showIssues(issues) {
     issueCount.innerText = `${filteredIssues.length} Issues`;
 
     for (let issue of issues) {
-        //issue find 
-        const statusImg = issue.status === "open"
-            ? "assets/Open-Status.png"
-            : "assets/Closed-Status.png";
+        //issue  status  
 
+
+        // 
         const issueCard = document.createElement("div");
 
         // add border top 
@@ -121,7 +120,7 @@ function showIssues(issues) {
                     <!-- card status img -->
                     <div class="card-img-priority flex flex-1 justify-between items-center">
                         <div>
-                            <img width="30px" src="${statusImg}" alt="">
+                            <img width="30px" src="assets/Open-Status.png" alt="">
                         </div>
                         
                         <button class="btn btn-soft btn-secondary rounded-full text-red-700 ">${issue.priority }</button>
