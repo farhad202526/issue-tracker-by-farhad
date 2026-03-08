@@ -116,7 +116,7 @@ function showIssues(issues) {
 
 
         issueCard.innerHTML = `
-                <div class="issue-card space-y-4 shadow-sm p-4 rounded-lg">
+                <div class="issue-card h-99 space-y-4 shadow-sm p-4 rounded-lg">
 
                     <!-- card status img -->
                     <div class="card-img-priority flex flex-1 justify-between items-center">
@@ -124,13 +124,13 @@ function showIssues(issues) {
                             <img width="30px" src="${statusImg}" alt="">
                         </div>
                         
-                        <button class="btn btn-soft btn-secondary rounded-full text-red-700 ">${issue.priority}</button>
+                        <button class="btn btn-soft btn-secondary rounded-full text-red-700 ">${issue.priority }</button>
                     </div>
 
                     <!-- card header -->
                      <div class="card-header space-y-2">
                         <h2 class="font-semibold line-clamp-2 ">${issue.title}</h2>
-                        <p class="text-[#64748B] text-[14px] line-clamp-2">${issue.description}</p>
+                        <p class="text-[#64748B] text-[14px] line-clamp-2 px-2">${issue.description}</p>
                      </div>
 
                      <!--  name -->
@@ -139,7 +139,7 @@ function showIssues(issues) {
 
                       <!-- date part  -->
 
-                      <div class="date py-4 border-t border-[#64748B]">
+                      <div class="date py-4 border-t  border-[#64748B]">
                         <p class="text-[#64748B]">#${issue.id} by ${issue.author}</p>
                         <p class="text-[#64748B]">${new Date(issue.createdAt).toLocaleDateString()}</p>
                       </div>
