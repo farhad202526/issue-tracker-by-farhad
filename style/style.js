@@ -23,3 +23,9 @@ loginBtn.addEventListener("click", function () {
 
 
 
+// home page js
+
+
+
+
+
