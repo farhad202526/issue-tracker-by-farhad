@@ -5,17 +5,19 @@
 
 
 
-// console.log("Hello! This is home page")
+// home page 
 let activeTab = "all"
 let issuesData = [];
 
 
-// spinner
+// spinner funtion add 
 const manageSpinner = (status)=>{
     if(status == true){
+        // add spanner and remove issueCount
         document.getElementById("spinner").classList.remove("hidden");
         document.getElementById("issue-container").classList.add("hidden");
     }else{
+        // add issuecount and remove spannner 
         document.getElementById("issue-container").classList.remove("hidden");
         document.getElementById("spinner").classList.add("hidden");
     }
@@ -23,12 +25,14 @@ const manageSpinner = (status)=>{
 
 const api = "https://phi-lab-server.vercel.app/api/v1/lab/issues";
 
-// console.log(api.length)
+// api issues fetch 
 manageSpinner(true);
 fetch(api)
     .then(res => res.json())
     .then(data => {
         issuesData = data.data;
+
+        // call show issues 
         showIssues(issuesData);
         manageSpinner(false);
     })
@@ -73,7 +77,7 @@ const displayIssueDetails = (issue) => {
 };
 
 
-// card load
+// card loading 
 
 function showIssues(issues) {
     const issuesContainer = document.getElementById("issues-container");
@@ -94,15 +98,15 @@ function showIssues(issues) {
     issueCount.innerText = `${filteredIssues.length} Issues`;
 
     for (let issue of issues) {
-        // console.log(issue)
+        //issue find 
         const statusImg = issue.status === "open"
             ? "assets/Open-Status.png"
             : "assets/Closed-Status.png";
 
         const issueCard = document.createElement("div");
 
-        // add border top dynamically
-        issueCard.style.borderTop = issue.status === "open" ? "4px solid #00A96E" : "4px solid #A855F7";
+        // add border top 
+        issueCard.style.borderTop = issue.status === "open" ? "4px solid #00A96E" : "4px solid #d3ccd9";
         issueCard.style.borderRadius = "0.5rem";
 
         // labels dynamically
@@ -120,19 +124,20 @@ function showIssues(issues) {
                             <img width="30px" src="${statusImg}" alt="">
                         </div>
                         
-                        <button class="btn btn-soft btn-secondary rounded-full">${issue.priority}</button>
+                        <button class="btn btn-soft btn-secondary rounded-full text-red-700 ">${issue.priority}</button>
                     </div>
 
                     <!-- card header -->
                      <div class="card-header space-y-2">
-                        <h2 class="font-semibold">${issue.title}</h2>
-                        <p class="text-[#64748B] text-[14px]">${issue.description}</p>
+                        <h2 class="font-semibold line-clamp-2 ">${issue.title}</h2>
+                        <p class="text-[#64748B] text-[14px] line-clamp-2">${issue.description}</p>
                      </div>
 
-                     <!-- topics name -->
-                      ${labelAdd}
+                     <!--  name -->
+                      
+                       ${labelAdd}
 
-                      <!-- date -->
+                      <!-- date part  -->
 
                       <div class="date py-4 border-t border-[#64748B]">
                         <p class="text-[#64748B]">#${issue.id} by ${issue.author}</p>
