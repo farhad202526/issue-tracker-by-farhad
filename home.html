@@ -55,25 +55,25 @@
 
 
 
-    <main class="bg-[#F8FAFC] pt-[60px]">
+    <main class="bg-[#F8FAFC] pt-[20px] sm:pt[60px]">
 
         <!-- tabs -->
-        <section class="tab-section w-9/12 mx-auto bg-white py-6 pl-6 rounded-lg mb-4">
-            <div class="flex justify-center px-5 sm:justify-normal gap-3">
-                <button id="all-tab" data-tab="all" class="btn btn-primary issue-tab-btn active w-[120px]">
+        <section class="tab-section w-11/12 mx-auto bg-white py-1 pl-6 rounded-lg mb-4">
+            <div class="flex justify-center px-5 sm:justify-normal  gap-3">
+                <button id="all-tab" data-tab="all" class="btn btn-primary issue-tab-btn active w-[60px] sm:w-[120px]">
                     All
                 </button>
-                <button id="open-tab" data-tab="open" class="btn btn-outline btn-primary issue-tab-btn w-[120px]">
+                <button id="open-tab" data-tab="open" class="btn btn-outline btn-primary issue-tab-btn  w-[60ps] sm:w-[120px]">
                     Open
                 </button>
-                <button id="closed-tab" data-tab="closed" class="btn btn-outline btn-primary issue-tab-btn w-[120px]">
+                <button id="closed-tab" data-tab="closed" class="btn btn-outline btn-primary issue-tab-btn w-[60px] sm:w-[120px]">
                     Closed
                 </button>
             </div>
         </section>
 
         <!-- counter container -->
-        <section class="counter w-9/12 mx-auto bg-white p-6 rounded-lg border-b border-[#E4E4E7]">
+        <section class="counter w-11/12 mx-auto bg-white p-3 rounded-lg border-b border-[#E4E4E7]">
             
             <div id="counter" class="flex flex-col  sm:flex-row i justify-between gap-4">
                 <div class="flex flex-col  sm:flex-row items-center gap-2">
@@ -95,14 +95,14 @@
         </section>
 
         <!-- issues container -->
-        <section id="issue-container" class="counter w-9/12 mx-auto bg-white p-8 rounded-lg">
-            <div id="issues-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <section id="issue-container" class="counter w-11/12 mx-auto bg-white p-8 rounded-lg">
+            <div id="issues-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-4 ">
 
             </div>
         </section>
 
         <!-- spinner -->
-         <section id="spinner" class="flex justify-center items-center py-10 w-9/12 mx-auto bg-white rounded-lg hidden">
+         <section id="spinner" class="flex justify-center items-center py-10 w-11/12 mx-auto bg-white rounded-lg hidden">
             <span class="loading loading-dots loading-xl"></span>
          </section>
 

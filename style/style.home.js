@@ -115,7 +115,7 @@ function showIssues(issues) {
 
 
         issueCard.innerHTML = `
-                <div class="issue-card h-95 space-y-4 shadow-sm p-4 rounded-lg">
+                <div class="issue-card h-95 space-y-4 shadow-xl p-4 rounded-lg">
 
                     <!-- card status img -->
                     <div class="card-img-priority flex flex-1 justify-between items-center">
